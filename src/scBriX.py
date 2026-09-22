@@ -155,10 +155,10 @@ class MultiModel:
             self.n_T[xtype] = diffcfg["n_T"]
 
 
-class scBriDi(nn.Module):
+class scBriX(nn.Module):
     def __init__(self, device, cfg, xtypes, n_clusters=28, save_path='./'):
         
-        super(scBriDi, self).__init__()
+        super(scBriX, self).__init__()
         self.xtypes = xtypes
         self.feats_dim = {key: cfg[key]['decoder']['input_size'] for key in cfg}
         model = MultiModel(self.xtypes, cfg, device, self.feats_dim)
